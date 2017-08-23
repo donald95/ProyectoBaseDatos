@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-jul-2017 17:29:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pojo.EnfermedadCronica" table="enfermedad_cronica" catalog="centro_clinico" optimistic-lock="version">
+        <id name="idEnfermedad" type="java.lang.Integer">
+            <column name="idEnfermedad" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" />
+        </property>
+        <set name="detalleEnfermedadCronicas" table="detalle_enfermedad_cronica" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idEnfermedad" />
+            </key>
+            <one-to-many class="Pojo.DetalleEnfermedadCronica" />
+        </set>
+    </class>
+</hibernate-mapping>

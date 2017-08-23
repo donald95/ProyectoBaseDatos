@@ -1,0 +1,71 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#vbox-btns-menu
+{
+    -fx-background-color: #282830;
+}
+
+#pnl-top-main
+{
+    -fx-background-color: #282830;
+}
+
+#btn-catalogos, #btn-operaciones, #btn-reportes, #btn-1, #btn-2
+{
+    -fx-background-color: transparent;
+}
+
+#btn-catalogos:hover,
+#btn-operaciones:hover,
+#btn-reportes:hover,
+#btn-1:hover,
+#btn-2:hover,
+#btn-guardar-paciente:hover,
+#btn-borrar-datos-paciente:hover
+{
+    -fx-background-color: gray;
+
+}
+
+#btn-catalogos:pressed, #btn-operaciones:pressed, #btn-reportes:pressed, #btn-1:pressed, #btn-2:pressed, #btn-guardar-paciente:pressed,
+#btn-borrar-datos-paciente:pressed
+{
+    -fx-background-color: #344146;
+}
+
+#vbox-items-catalogos
+{
+    -fx-background-color: #282830;
+}
+
+#tab-pane-paciente
+{
+    -fx-border-color: gray;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+
+}
+
+#tbl-paciente
+{
+    -fx-background-color: #E8FFFF;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: linear-gradient(to right, white 10%, #D7D7CB 100% );
+    -fx-size: 45;
+/*    -fx-border-color: -fx-box-border;*/
+/*    -fx-border-width: 0 1 3 0;*/
+/*    -fx-border-insets: 0;*/
+}
+
+.table-row-cell:odd
+{
+    -fx-background-color: whitesmoke;
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b456ad3e-c869-4868-95bf-c02feac23a0a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="Numero_De_Expediente" class="java.lang.String"/>
+	<field name="Primer_Nombre" class="java.lang.String"/>
+	<field name="Segundo_Nombre" class="java.lang.String"/>
+	<field name="Primer_Apellido" class="java.lang.String"/>
+	<field name="Segundo_Apellido" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="36" y="0" width="487" height="79" uuid="b4caf469-e268-40ec-a76a-3b1339184b48"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="48"/>
+				</textElement>
+				<text><![CDATA[Pacientes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="25" width="100" height="20" uuid="bea946c2-5c1e-4dfa-aadc-bade6551091e"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Numero De Expediente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="25" width="100" height="20" uuid="255997d9-b42c-46bb-b6cf-aa73a0ddbeb8"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Primer Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="25" width="100" height="20" uuid="26b5e9b0-e795-47de-82c2-4116606bbaa8"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Segundo Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="25" width="100" height="20" uuid="a3eed63d-2837-4726-bfca-88e601444b53"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Primer Apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="25" width="100" height="20" uuid="8b77c7f6-5f68-4c1c-9b9c-932c75dafc5c"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<text><![CDATA[Segundo Apellido]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="2548ee1e-bacf-4b50-8730-e21e9aebcb8e"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Numero_De_Expediente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="0" width="100" height="20" uuid="02a20ddc-6d2a-46b2-a768-f4cf98c2ec76"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Primer_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="0" width="100" height="20" uuid="c839c94c-0aea-46c8-8c43-b7f72597fc48"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Segundo_Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="0" width="100" height="20" uuid="f1fb9be5-1d09-4960-9840-61b7c2c51287"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Primer_Apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="8a72278c-fa38-4f5a-bb4f-4ec9efb56ee6"/>
+				<textElement>
+					<font fontName="Agency FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Segundo_Apellido}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

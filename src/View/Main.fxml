@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1500.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainController">
+    <stylesheets>
+        <URL value="@main.css" />
+    </stylesheets>
+   <children>
+      <BorderPane layoutX="261.0" layoutY="158.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox id="vbox-btns-menu" prefHeight="200.0" prefWidth="200.0" styleClass="mainFxmlClass" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="btn-catalogos" fx:id="btnCatalog" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#SlideItemsCatalog" styleClass="mainFxmlClass" stylesheets="@main.css" text="Catálogos" textFill="WHITE" />
+                  <Button id="btn-operaciones" fx:id="btnOperator" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#SlideItemsOperator" styleClass="mainFxmlClass" stylesheets="@main.css" text="Operaciones" textFill="WHITE" />
+                  <Button id="btn-reportes" fx:id="btnReport" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#SlideItemsReport" styleClass="mainFxmlClass" stylesheets="@main.css" text="Reportes" textFill="WHITE" />
+                  <Button id="btn-1" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Otros" textFill="WHITE" />
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <Pane id="pnl-top-main" prefHeight="30.0" prefWidth="200.0" styleClass="mainFxmlClass" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <Pane fx:id="panePacient" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane id="tab-pane-paciente" fx:id="tabPacient" layoutX="75.0" layoutY="35.0" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Datos Personales">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="344.0" layoutY="153.0" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="494.0" minWidth="10.0" prefWidth="301.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="745.0" minWidth="10.0" prefWidth="697.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Numero de Expediente:" />
+                                          <Label text="Primer Nombre:" GridPane.rowIndex="1" />
+                                          <Label text="Segundo Nombre:" GridPane.rowIndex="2" />
+                                          <Label text="Primer Apellido:" GridPane.rowIndex="3" />
+                                          <Label text="Segundo Apellido:" GridPane.rowIndex="4" />
+                                          <Label text="Fecha De Nacimiento:" GridPane.rowIndex="5" />
+                                          <Label text="Cédula:" GridPane.rowIndex="6" />
+                                          <Label text="Sexo:" GridPane.rowIndex="7" />
+                                          <TextField maxWidth="400.0" minWidth="600.0" prefWidth="400.0" GridPane.columnIndex="1" />
+                                          <TextField maxWidth="400.0" minWidth="600.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField maxWidth="400.0" minWidth="600.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField maxWidth="400.0" minWidth="600.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField maxWidth="400.0" minWidth="600.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <DatePicker minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField maxWidth="400.0" minWidth="400.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <ChoiceBox prefHeight="25.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                       </children>
+                                    </GridPane>
+                                    <HBox id="hbox-button-paciente" alignment="CENTER" layoutX="143.0" layoutY="276.0" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="469.0" spacing="1.0" styleClass="mainFxmlClass" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <Button id="btn-guardar-paciente" fx:id="btnSavePacient" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddPacient" style="-fx-background-color: #282830;" styleClass="mainFxmlClass" text="Guardar" textFill="WHITE" />
+                                          <Button id="btn-borrar-datos-paciente" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" style="-fx-background-color: #282830;" styleClass="mainFxmlClass" text="Borrar Datos" textFill="WHITE" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="1.0" left="600.0" right="1.0" top="1.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Información Pacientes">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="320.0" layoutY="148.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <TableView id="tbl-paciente" fx:id="tblPaciente" prefHeight="371.0" prefWidth="998.0" styleClass="mainFxmlClass">
+                                            <columns>
+                                              <TableColumn id="header-column1" fx:id="Column1" prefWidth="75.0" text="Numero De Expediente" />
+                                              <TableColumn fx:id="Column2" prefWidth="75.0" text="Nombre" />
+                                                <TableColumn fx:id="Column3" prefWidth="75.0" text="Apellido" />
+                                                <TableColumn fx:id="Column4" prefWidth="75.0" text="Fecha De Nacimiento" />
+                                                <TableColumn fx:id="Column5" prefWidth="75.0" text="Sexo" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+                  <VBox id="vbox-items-catalogos" fx:id="vboxItemsCatalog" onMouseExited="#ExitItems" prefHeight="200.0" prefWidth="100.0" styleClass="mainFxmlClass">
+                     <children>
+                        <Button id="btn-catalogos" fx:id="btnPacient" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#getVisiblePanePacient" styleClass="mainFxmlClass" stylesheets="@main.css" text="Paciente" textFill="WHITE" />
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Medicamento" textFill="WHITE" />
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Catálogos" textFill="WHITE" />
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Catálogos" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <VBox id="vbox-items-catalogos" fx:id="vboxItemsOperator" layoutY="50.0" onMouseExited="#ExitItemsOperator" prefHeight="200.0" prefWidth="100.0" styleClass="mainFxmlClass">
+                     <children>
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Operaciones" textFill="WHITE" />
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Operaciones" textFill="WHITE" />
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Operaciones" textFill="WHITE" />
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Operaciones" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <VBox id="vbox-items-catalogos" fx:id="vboxItemsReport" layoutY="100.0" onMouseExited="#ExitItemsReport" prefHeight="200.0" prefWidth="100.0" styleClass="mainFxmlClass">
+                     <children>
+                        <Button id="btn-catalogos" fx:id="getPacientReports" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#OnActionVIewPacientReports" styleClass="mainFxmlClass" stylesheets="@main.css" text="Reportes de Pacientes" textFill="WHITE" />
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Reportes" textFill="WHITE" />
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Reportes" textFill="WHITE" />
+                        <Button id="btn-catalogos" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@main.css" text="Reportes" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

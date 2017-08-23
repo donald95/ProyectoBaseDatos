@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorMain" minHeight="700.0" minWidth="1300.0" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.LoginController">
+    <stylesheets>
+        <URL value="@LoginStyle.css" />
+    </stylesheets>
+   <children>
+      <MediaView fx:id="viewVideo" fitHeight="700.0" fitWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane id="pnl-login" layoutX="480.0" layoutY="100.0" minHeight="500.0" minWidth="400.0" prefHeight="200.0" prefWidth="200.0" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane minWidth="400.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle fx:id="rctLogin" arcHeight="5.0" arcWidth="5.0" fill="#3d8eb9" height="700.0" layoutX="-400.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <VBox id="vbox-login" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="500.0" minWidth="400.0" prefHeight="200.0" prefWidth="100.0" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <children>
+                        <ImageView fitHeight="170.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resource/Login.png" />
+                           </image>
+                           <effect>
+                              <Reflection fraction="0.5" topOpacity="0.4" />
+                           </effect>
+                        </ImageView>
+                        <Button id="btn-ingresar" fx:id="btnIngresar" alignment="CENTER" mnemonicParsing="false" onAction="#SlideRigthLogin" prefHeight="100.0" prefWidth="400.0" styleClass="mainFxmlClass" text="Ingresar" textFill="WHITE" />
+                        <Button id="btn-salir" mnemonicParsing="false" prefHeight="100.0" prefWidth="400.0" styleClass="mainFxmlClass" text="Salir" textFill="WHITE" />
+                        <ImageView fitHeight="81.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                           <effect>
+                              <Reflection fraction="1.0" topOpacity="0.21" />
+                           </effect>
+                           <image>
+                              <Image url="@../Resource/Enfermera.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets top="100.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Pane fx:id="pnlSesion" layoutY="1.0" prefHeight="700.0" prefWidth="400.0">
+               <children>
+                  <Button id="btn-cancelar" fx:id="btnCancel" layoutX="261.0" layoutY="433.0" mnemonicParsing="false" onAction="#SlideLeftLogin" prefHeight="30.0" prefWidth="100.0" styleClass="mainFxmlClass" text="Cancelar" textFill="WHITE" />
+                  <Button id="btn-acceder" fx:id="btnAccess" layoutX="158.0" layoutY="433.0" mnemonicParsing="false" onAction="#AccessMainWindow" prefHeight="30.0" prefWidth="100.0" styleClass="mainFxmlClass" text="Acceder" textFill="WHITE" />
+                  <PasswordField fx:id="txtPassword" layoutX="111.0" layoutY="404.0" prefHeight="25.0" prefWidth="250.0" promptText="Contraseña" />
+                  <TextField fx:id="txtUser" layoutX="111.0" layoutY="375.0" prefHeight="25.0" prefWidth="250.0" promptText="Usuario" />
+                  <Label layoutX="59.0" layoutY="379.0" text="Usuario:" textFill="WHITE" />
+                  <Label layoutX="39.0" layoutY="408.0" text="Contraseña:" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

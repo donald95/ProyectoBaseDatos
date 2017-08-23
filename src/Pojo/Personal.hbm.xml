@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-jul-2017 17:29:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pojo.Personal" table="personal" catalog="centro_clinico" optimistic-lock="version">
+        <id name="idPersonal" type="java.lang.Integer">
+            <column name="idPersonal" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="usuario" class="Pojo.Usuario" fetch="select">
+            <column name="idUsuario" />
+        </many-to-one>
+        <property name="tipoPersonal" type="string">
+            <column name="tipoPersonal" length="45" />
+        </property>
+        <property name="tituloProfesional" type="string">
+            <column name="tituloProfesional" length="45" />
+        </property>
+        <property name="fechaNacimiento" type="string">
+            <column name="fechaNacimiento" length="45" />
+        </property>
+        <property name="estadoCivil" type="string">
+            <column name="estadoCivil" length="45" />
+        </property>
+        <property name="fechaContratacion" type="date">
+            <column name="fechaContratacion" length="10" />
+        </property>
+        <property name="cedula" type="string">
+            <column name="cedula" length="100" />
+        </property>
+        <property name="primerNombre" type="string">
+            <column name="primerNombre" length="45" />
+        </property>
+        <property name="segundoNombre" type="string">
+            <column name="segundoNombre" length="45" />
+        </property>
+        <property name="primerApellido" type="string">
+            <column name="primerApellido" length="45" />
+        </property>
+        <property name="segundoApellido" type="string">
+            <column name="segundoApellido" length="45" />
+        </property>
+        <set name="tecnicolaboratorios" table="tecnicolaboratorio" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idPersonal" />
+            </key>
+            <one-to-many class="Pojo.Tecnicolaboratorio" />
+        </set>
+        <set name="tecnicoenfermerias" table="tecnicoenfermeria" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idPersonal" />
+            </key>
+            <one-to-many class="Pojo.Tecnicoenfermeria" />
+        </set>
+        <set name="medicos" table="medico" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idPersonal" />
+            </key>
+            <one-to-many class="Pojo.Medico" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-jul-2017 17:29:17 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Pojo.Pap" table="pap" catalog="centro_clinico" optimistic-lock="version">
+        <id name="idPap" type="java.lang.Integer">
+            <column name="idPAP" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="paciente" class="Pojo.Paciente" fetch="select">
+            <column name="idPaciente" />
+        </many-to-one>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="19" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="observacion" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

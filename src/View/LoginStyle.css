@@ -1,0 +1,32 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#pnl-login
+{
+    -fx-background-color: #282830;
+}
+
+#btn-ingresar, #btn-salir
+{
+    -fx-background-color: transparent;
+}
+
+#btn-acceder, #btn-cancelar
+{
+    -fx-background-color: #344146;
+}
+
+#btn-ingresar:hover, #btn-salir:hover, #btn-acceder:hover, #btn-cancelar:hover
+{
+    -fx-background-color: #3D8EB9;
+}
+
+#btn-ingresar:pressed, #btn-salir:pressed, #btn-acceder:pressed, #btn-cancelar:pressed
+{
+    -fx-background-color: darkgray;
+}
